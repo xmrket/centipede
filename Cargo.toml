@@ -15,19 +15,19 @@ keywords = ["cryptography", "crypto"]
 crate-type = ["lib"]
 
 [dependencies]
-serde_derive = "1.0"
-serde = "1.0"
-rayon = "1.0.3"
-curv-kzen = { version = "0.10", default-features = false }
-bulletproof-kzen = { version = "1.2.1", default-features = false }
-sha2 = "0.9"
-generic-array = "0.14"
+serde = "1.0.164"
+serde_derive = "1.0.164"
+rayon = "1.7.0"
+curv-kzen = { version = "0.10", default-features = false, path = "../curv", features = ["num-bigint"] }
+sha2 = "0.10.7"
+generic-array = "0.14.7"
+
+[dependencies.bulletproof-kzen]
+version = "1.2.1"
+path = "../bulletproofs"
 
 [dev-dependencies]
-criterion = "0.2"
-
-[features]
-default = ["curv-kzen/rust-gmp-kzen"]
+criterion = "0.5.1"
 
 [[bench]]
 name = "v_backup"

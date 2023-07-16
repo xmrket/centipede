@@ -14,24 +14,18 @@ version 3 of the License, or (at your option) any later version.
 @license GPL-3.0+ <https://github.com/KZen-networks/centipede/blob/master/LICENSE>
 */
 
-pub mod grad_release;
 pub mod juggling;
-pub mod wallet;
 extern crate bulletproof;
 extern crate curv;
 extern crate generic_array;
 extern crate rayon;
 extern crate sha2;
 
-#[macro_use]
-extern crate serde_derive;
 extern crate serde;
+extern crate serde_derive;
 
 #[derive(Copy, PartialEq, Eq, Clone, Debug)]
 pub enum Errors {
     ErrorDecrypting,
     ErrorProving,
-    ErrorFirstMessage,
-    ErrorSegmentProof,
-    ErrorSegmentNum,
 }

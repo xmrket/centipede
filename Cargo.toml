@@ -20,8 +20,8 @@ serde_derive = "1.0.164"
 rayon = "1.7.0"
 sha2 = "0.10.7"
 generic-array = "0.14.7"
-curv-kzen = { git = "https://github.com/xmrket/curv.git", branch = "master", features = ["num-bigint"] }
-bulletproof-kzen = { git = "https://github.com/xmrket/bulletproofs.git", branch = "master" }
+curv-kzen = { git = "https://github.com/xmrket/curv.git", features = ["num-bigint"] }
+bulletproof-kzen = { git = "https://github.com/xmrket/bulletproofs.git" }
 
 
 [dev-dependencies]

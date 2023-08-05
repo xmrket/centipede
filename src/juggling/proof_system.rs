@@ -19,8 +19,8 @@ use curv::cryptographic_primitives::proofs::sigma_correct_homomorphic_elgamal_en
 use curv::cryptographic_primitives::proofs::sigma_correct_homomorphic_elgamal_enc::{HomoELGamalProof,HomoElGamalWitness,HomoElGamalStatement};
 use curv::arithmetic::traits::Converter;
 use bulletproof::proofs::range_proof::{RangeProof,generate_random_point};
-use juggling::segmentation::Msegmentation;
-use Errors::{self, ErrorProving};
+use crate::juggling::segmentation::Msegmentation;
+use crate::Errors::{self, ErrorProving};
 use serde::{Deserialize, Serialize};
 
 use curv::cryptographic_primitives::hashing::{Digest, DigestExt};

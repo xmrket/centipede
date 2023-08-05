@@ -23,10 +23,10 @@ use std::ops::{Shl, Shr};
 use curv::arithmetic::traits::*;
 use curv::elliptic::curves::{Curve, Point, Scalar};
 use curv::BigInt;
-use juggling::proof_system::{Helgamal, Helgamalsegmented, Witness};
+use crate::juggling::proof_system::{Helgamal, Helgamalsegmented, Witness};
 use rayon::prelude::*;
 
-use Errors::{self, ErrorDecrypting};
+use crate::Errors::{self, ErrorDecrypting};
 
 pub struct Msegmentation<E: Curve> {
     Curve: PhantomData<*const E>,
